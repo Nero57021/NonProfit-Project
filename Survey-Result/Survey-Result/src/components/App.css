@@ -1,0 +1,168 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+#input {
+  color: #002feb;
+  font-weight: 1200;
+}
+#MuiSlider-markLabel {
+  color: rgb(238, 238, 238);
+}
+#snorlax {
+  color: aliceblue;
+}
+/* #generic{
+  border: 1px solid #00b16a;
+  background-color:#00b16a;
+} */
+*/
+/* #plush{
+background-color:White;
+} */
+/* #snorlax{
+  background-color:rgb(177, 95, 95);
+} */
+form#pickachu {
+  font-weight: 400;
+  background-color: #001569;
+}
+/* input#trapezoid{
+  background-color:rgb(255, 255, 255);
+} */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #646464;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+logo {
+  display: inline-block;
+  margin: 5px;
+  margin-left: 10px;
+  padding-right: -150px;
+  float: left;
+  height: 75px;
+  width: 150px;
+  border-radius: 42%;
+}
+
+#table-desc {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-collapse: separate;
+  border-spacing: 5px 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body {
+  margin: 0;
+  text-align: center;
+  padding-top: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: transparent;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+Header {
+  margin: 0;
+  padding-left: 1rem;
+}
+footer {
+  margin: auto;
+  padding-bottom: 5rem;
+}
+h1 {
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+  text-align: "center";
+}
+button {
+  height: 40px;
+  width: 60px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.795);
+  color: rgb(5, 5, 5);
+}
+P {
+  font-weight: bolder;
+  color: #ebebeb;
+}
+#more-info {
+  height: 35px;
+  width: 100px;
+  border-radius: 7px;
+  background: white;
+  color: rgb(5, 5, 5);
+}
+.slider {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.q2 {
+  display: "flex";
+  flex-direction: "row";
+  justify-content: "space-between";
+  position: "relative";
+}
+#next {
+  height: 30px;
+  width: 50px;
+  border-radius: 7px;
+  background: #f2f3f4;
+}
+
+.next-btn {
+  position: relative;
+  color: antiquewhite;
+}
+.divider1 {
+  height: auto;
+  width: 30px;
+  display: inline-block;
+}
+.divider2 {
+  height: auto;
+  width: 5px;
+  display: inline-block;
+}
+
+.divider3 {
+  height: 50px;
+  width: auto;
+  display: inline-block;
+}

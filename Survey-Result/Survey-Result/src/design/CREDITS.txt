@@ -1,0 +1,34 @@
+constructor(props) {
+    super(props);
+    this.state = {
+      id: this.props.userId,
+    };
+    var instance = require("./Survey.js")
+    this.state.id = instance.getID();
+    this.handleClick = this.handleClick.bind(this);
+    console.log(this.state.id);
+  }
+  // async componentDidMount() {
+  //   const url = "http://172.20.30.172:8080/question1?id=&response=";
+  //   const response = await fetch(url);
+  //   const data = await response.json();
+  //   this.setState({ id:this.state.id, loading: false,});
+  //   console.log(data);
+  // }
+  
+  handleClick = (e) => {
+   
+    var data = {};
+    const params= new URLSearchParams ( {
+      id: this.state.id,
+    }).toString();
+    console.log(params);
+
+    const url = 'http://172.20.30.172:8080/question1?' + params;
+    fetch(url, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: data,
+    });
+    this.props.history.push({ pathname: "/q2",});
+  };

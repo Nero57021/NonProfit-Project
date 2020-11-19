@@ -1,0 +1,89 @@
+<label> Sender </label>
+          <br />
+          <input value={email.sender}
+            onChange={e => this.setState({ email: { ...email, sender: e.target.value } })} />
+          <div style={spacer} />
+          <label> Subject </label>
+          <br />
+          <input value={email.subject}
+            onChange={e => this.setState({ email: { ...email, subject: e.target.value } })} />
+          <div style={spacer} />
+          <label> Message </label>
+          <br />
+          <textarea rows={3} value={email.text} style={textArea}
+            onChange={e => this.setState({ email: { ...email, text: e.target.value } })} />
+          <div style={spacer} />
+
+          {/* <label> Refer a friend </label>
+          <br />
+          <input value={email.recipient}
+            onChange={e => this.setState({ email_2: { ...email_2, recipient: e.target.value } })} />
+          <div style={spacer} /> */}
+
+{require('./images/pic03.jpg')}
+//from email.jsx
+const data = await response.json();
+
+From Jeremy
+Refer to this on Json fetching 
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+function Reader() {
+  const [posts, setposts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    axios
+      .get("http://172.20.30.172:8080/from")
+      .then((res) => {
+        setposts(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  return loading ? (
+    <div>Loading...</div>
+  ) : (
+    <div>
+      <ul>
+        {/* {posts.map((post) => ( */}
+        <li key={posts.id}>{posts.message}</li>
+        {/* ))} */}
+      </ul>
+    </div>
+  );
+}
+export default Reader;
+
+
+
+<Route exact path="/" component={Survey} />
+            <Route exact path="/q1" component={Question1}/>
+            <Route exact path="/q1" component={Question2}/>
+            <Route exact path="/q1" component={Question3}/>
+            <Route exact path="/q1" component={Question4}/>
+            <Route exact path="/results" component={Question4}/>
+
+
+  constructor(props) {
+    super(props);
+  }
+  state = {
+    loading: true,
+    person: null,
+    id: this.props.userId,
+  };
+  // Fetching class for choice 2
+  async componentDidMount() {
+    const params= new URLSearchParams ( {
+      id: this.state.id,
+    }).toString();
+    const url = `http://172.20.30.172:8080/getresults?${params}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    this.setState({ person: data, loading: false });
+    console.log(data);
+  }
